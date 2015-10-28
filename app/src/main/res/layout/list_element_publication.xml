@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!-- business illustration -->
+        <ImageView
+            android:id="@+id/business_illustration"
+            android:layout_width="80dp"
+            android:layout_height="80dp"></ImageView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical">
+
+            <!-- title -->
+            <be.gling.businessApp.view.widget.customer.CustomTextView
+                android:id="@+id/business_title"
+                style="@style/text_blue_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:text="Pormotion sur mon saumon"></be.gling.businessApp.view.widget.customer.CustomTextView>
+
+            <!-- address -->
+            <be.gling.businessApp.view.widget.customer.CustomTextView
+                android:id="@+id/business_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Publié le 23 sept 2015 - 3,34 km"></be.gling.businessApp.view.widget.customer.CustomTextView>
+
+
+        </LinearLayout>
+
+
+        <!-- interest icon -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <be.gling.businessApp.view.widget.customer.GlingIcon
+                android:id="@+id/publication_interest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/gling_icon"
+                android:gravity="right"
+                android:padding="10dp"
+                android:textColor="@color/color_white"
+                android:textSize="18dp"></be.gling.businessApp.view.widget.customer.GlingIcon>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <be.gling.businessApp.view.widget.customer.CustomTextView
+        android:id="@+id/publication_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold" />
+
+    <!-- promotion data -->
+    <LinearLayout
+        android:id="@+id/promotion_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/design_border_top"
+        android:orientation="horizontal">
+
+        <be.gling.businessApp.view.widget.customer.CustomTextView
+            android:id="@+id/publication_promotion_percent"
+            style="@style/text_blue_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="16dp" />
+
+        <LinearLayout
+            android:id="@+id/publication_promotion_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- new price -->
+            <be.gling.businessApp.view.widget.customer.CustomTextView
+                android:id="@+id/publication_promotion_new_price"
+                style="@style/text_blue_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:textSize="16dp" />
+
+            <!-- old price -->
+            <be.gling.businessApp.view.widget.customer.CustomTextView
+                android:id="@+id/publication_promotion_old_price"
+                style="@style/text_blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+        <be.gling.businessApp.view.widget.customer.CustomTextView
+            android:id="@+id/publication_promotion_date"
+            style="@style/text_blue_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <!-- description-->
+    <be.gling.businessApp.view.widget.customer.CustomTextView
+        android:id="@+id/publication_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/design_border_top"
+        android:text="je suis une longue description de merde qui ne sert à rien et je suis juste là pour faire du remplissage" />
+
+    <!-- illustration -->
+    <RelativeLayout
+        android:id="@+id/publication_illustration_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/publication_illustration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitStart" />
+
+        <FrameLayout
+            android:id="@+id/publication_illustration_more_picture_box"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/illustration_more_picture">
+
+            <TextView
+                android:id="@+id/publication_illustration_more_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="+2"
+                android:textColor="@color/color_grey"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <!-- facebook share -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/facebook_share_btn" />
+    </RelativeLayout>
+
+
+</LinearLayout>
